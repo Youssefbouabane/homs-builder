@@ -1,0 +1,9 @@
+version: '2.2'
+services:
+ homs-help-app:
+  build:
+   context: .
+  container_name: homs-bo-help-prod
+  image: youssefbouabane/homs-help-front-prod:latest
+  ports:
+   - "9095:80"

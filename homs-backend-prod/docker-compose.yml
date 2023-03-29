@@ -1,0 +1,20 @@
+version: '2.2'
+services:
+ homs-backend-app-prod:
+  build:
+   context: .
+  container_name: homs-backend-spring-prod
+  image: oubennis/homs-backend-prod:latest
+  environment:
+   - "SPRING_PROFILES_ACTIVE=prod"
+  ports:
+   - "8181:9998"
+  networks:
+   - homs-backend-network
+
+networks:
+ homs-backend-network:
+  name: homs-backend-network
+
+volumes:
+ dbvol:
